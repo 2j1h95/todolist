@@ -2,9 +2,15 @@ function clock(){
     var today = new Date();
     var h = today.getHours().toString();
     var m = today.getMinutes().toString();
+    var s = today.getSeconds().toString();
+    var y = today.getFullYear().toString();
+    var d = today.getDate().toString();
+    var month = today.getMonth().toString();
     h = improveRead(h);
     m = improveRead(m);
-    document.getElementById('clock').innerHTML = h + ":" + m;
+    s = improveRead(s);
+    month = improveRead(month);
+    document.getElementById('clock').innerHTML = y +"-"+ month +"-"+ d+" " + h + ":" + m + ":" + s;
     var t = setTimeout(clock, 500);
 }
 
