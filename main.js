@@ -12,7 +12,7 @@ function improveRead(input){
     is = Number(input);
     if(is < 10){
         newtime = '0' + input;
-        return newtime
+        return newtime;
     }else{
         return input;
     }
@@ -21,7 +21,7 @@ function improveRead(input){
 var myNodelist = document.getElementsByTagName('li');
 var i;
 for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement('sapn');
+  var span = document.createElement('span');
   var txt = document.createTextNode("\u00D7");
   span.className = 'close';
   span.appendChild(txt);

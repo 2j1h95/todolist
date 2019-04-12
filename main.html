@@ -6,9 +6,9 @@
                 box-sizing: border-box;
             }
             ul{
+                list-style: none;
                 margin: 0;
                 padding: 0;
-                border: #482adc solid 1px;
             }
             ul li{
                 cursor: pointer;
@@ -28,6 +28,7 @@
             }
             ul li:hover {
                 background: #ddd;
+                opacity: 1;
             }
             ul li.checked{
                 background: #888;
@@ -57,8 +58,7 @@
                 color: white;
             }
             .header{
-                border: #482adc solid 1px;
-                background-color: #482adc;
+                background-color: #B71C1C;
                 padding: 40px, 50px;
                 color: white;
                 text-align: center;
@@ -93,21 +93,35 @@
             #clock{
                 font-size: 1.5em;
             }
+            #todolistbody{
+                width: 70%;
+                height: 100%;
+                margin: auto;
+                padding: 3rem;
+                opacity: 0.7;
+            }
+            body{
+                background-image: url("https://source.unsplash.com/random");
+                background-size: cover;
+            }
         </style>
     </head>
     <body onload="clock();">
-        <div id="title" class="header">
-            <h2>To do List</h2>
-            <div id="clock"></div>
-            <input id="addtodo" type="text" onkeydown="onEnter()" placeholder="Write To Do">
-            <span onclick="addItem()" class="addBtn">add</span>
+        <div id="todolistbody">
+            <div id="title" class="header">
+                <h1>To do List</h1>
+                <div id="clock"></div>
+                <input id="addtodo" type="text" onkeydown="onEnter()" placeholder="Write To Do">
+                <span onclick="addItem()" class="addBtn">add</span>
+            </div>
+                <ul id="todolist">
+                    <li class="checked">맛있는 밥 먹기</li>
+                    <li>운동 하기 (못지킬거 암)</li>
+                    <li>공부하기</li>
+                    <li>살아있다고 부모님께 생존신고하기</li>
+                </ul>
         </div>
-            <ul id="todolist">
-                <li class="checked">확인용</li>
-                <li>테스트</li>
-                <li>또!</li>
-                <li>맨날 안돼!</li>
-            </ul>
+
     </body>
     <script src="main.js"></script>
 </html>
